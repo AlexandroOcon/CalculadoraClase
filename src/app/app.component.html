@@ -1,0 +1,23 @@
+<main class="main">
+  <div class="content">
+    <div class="info">
+      <h1>{{ title }}</h1>
+      <p>Calculadora creada con Angular</p>
+    </div>
+    <div class="content-inputs">
+      <input #input1 placeholder="Operand 1" />
+      <input #input2 placeholder="Operand 2" />
+    </div>
+    <div class="content-buttons">
+      <button (click)="calculate('+', input1.value, input2.value)">+</button>
+      <button (click)="calculate('-', input1.value, input2.value)">-</button>
+      <button (click)="calculate('*', input1.value, input2.value)">*</button>
+      <button (click)="calculate('/', input1.value, input2.value)">/</button>
+    </div>
+    <div class="content-result">
+      <p>{{ result }}</p>
+    </div>
+  </div>
+</main>
+
+<router-outlet />
